@@ -1,3 +1,4 @@
+package Classifiers;
 import weka.classifiers.*;
 import weka.classifiers.trees.J48;
 import weka.core.Instance;

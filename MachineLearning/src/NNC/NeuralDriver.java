@@ -1,4 +1,4 @@
-package Classifiers;
+package Classifiers.NNC;
 import weka.classifiers.Evaluation;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
@@ -19,7 +19,7 @@ import java.util.Random;
 
 import Classifiers.NNC.NeuralNetworkClassifier;
 
-public class ClassifierDriver
+public class NeuralDriver
 {	
 	//String data = "krkopt.csv";
 	String data = "iris.csv";
@@ -93,12 +93,9 @@ public class ClassifierDriver
 	
 	public static void main(String args[]) throws Exception
 	{
-		ClassifierDriver driver = new ClassifierDriver();
+		NeuralDriver driver = new NeuralDriver();
 	
-		//HardCodedClassifier classifier = new HardCodedClassifier();
-		//KNNClassifier classifier = new KNNClassifier(1);
-		TreeClassifier classifier = new TreeClassifier();
-		
+		NeuralNetworkClassifier classifier = new NeuralNetworkClassifier(3,20000,0.5);
 
 		Instances data = driver.createInstance();
 		Instances newData = driver.randomizeData(data);
