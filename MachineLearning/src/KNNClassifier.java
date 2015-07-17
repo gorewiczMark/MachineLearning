@@ -1,12 +1,13 @@
 package Classifiers;
-import weka.classifiers.AbstractClassifier;
+import weka.classifiers.Classifier;
 import weka.core.Instance;
 import weka.core.Instances;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-public class KNNClassifier extends AbstractClassifier 
+@SuppressWarnings("serial")
+public class KNNClassifier extends Classifier 
 {
 	final int k;
 	Instances saved;

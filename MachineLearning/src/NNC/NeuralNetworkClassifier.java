@@ -1,14 +1,13 @@
 package Classifiers.NNC;
-import javafx.util.Pair;
-import weka.classifiers.AbstractClassifier;
+import weka.classifiers.Classifier;
 import weka.core.Instance;
 import weka.core.Instances;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-public class NeuralNetworkClassifier extends AbstractClassifier {
+@SuppressWarnings("serial")
+public class NeuralNetworkClassifier extends Classifier {
     Network network;
     int layers = 3;
     int iterations = 50;
@@ -59,9 +58,10 @@ public class NeuralNetworkClassifier extends AbstractClassifier {
             errorsPerIteration.add(errorsPer);
         }
 
-        for (Double d : errorsPerIteration) {
-            System.out.println(d);
-        }
+       /* for (Double d : errorsPerIteration) 
+        * {
+             System.out.println(d);
+          }*/
     }
 
     @Override

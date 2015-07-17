@@ -1,13 +1,14 @@
 package Classifiers;
 import javafx.util.Pair;
-import weka.classifiers.AbstractClassifier;
+import weka.classifiers.Classifier;
 import weka.core.Attribute;
 import weka.core.Instance;
 import weka.core.Instances;
 
 import java.util.*;
 
-public class TreeClassifier extends AbstractClassifier 
+@SuppressWarnings("serial")
+public class TreeClassifier extends Classifier
 {
 	Node tree;
 

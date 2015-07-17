@@ -2,26 +2,18 @@ package Classifiers.NNC;
 import weka.classifiers.Evaluation;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
-import weka.core.converters.ArffSaver;
-import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.Discretize;
-import weka.filters.unsupervised.attribute.NumericToBinary;
 import weka.filters.unsupervised.attribute.NumericToNominal;
 import weka.filters.unsupervised.attribute.Standardize;
 import weka.filters.unsupervised.instance.Randomize;
 import weka.filters.unsupervised.instance.RemovePercentage;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.Random;
-
 import Classifiers.NNC.NeuralNetworkClassifier;
 
 public class NeuralDriver
 {	
-	//String data = "krkopt.csv";
 	String data = "iris.csv";
 			
 	public Instances createInstance() throws Exception
